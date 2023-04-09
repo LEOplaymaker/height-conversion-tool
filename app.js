@@ -19,7 +19,7 @@ const results = document.querySelector('#results');
         results.textContent = "Please enter an inch value between 0 and 12";
     } else {
         //make conversion to centimers
-        //cm = inches * 2.54
+        cm = inches * 2.54
         let totalInches = (feet*12) + inches;
         results.textContent = `${totalInches} cm`;
         document.querySelector('#feet').value = '';
