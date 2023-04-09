@@ -1,11 +1,10 @@
-
 const form = document.querySelector('form');
 
 form.addEventListener('submit', function(e){
     //grab content from feet input
-let feet = document.querySelector('#feet');
-let inches = document.querySelector('#inches');
-const results = document.querySelector('#results');
+    let feet = document.querySelector('#feet');
+    let inches = document.querySelector('#inches');
+    const results = document.querySelector('#results');
     e.preventDefault();
 
     feet = parseInt(feet.value);
@@ -18,11 +17,11 @@ const results = document.querySelector('#results');
     } else if (inches < 0 || inches >= 12) {
         results.textContent = "Please enter an inch value between 0 and 12";
     } else {
-        //make conversion to centimers
-        let cm = inches * 2.54
+        //make conversion to centimeters
+        let cm = inches * 2.54;
         let totalInches = (feet*12) + inches;
         results.textContent = `${cm} cm`;
         document.querySelector('#feet').value = '';
         document.querySelector('#inches').value = '';
     }
-})
+});
