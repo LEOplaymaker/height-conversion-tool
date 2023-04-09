@@ -1,4 +1,17 @@
-const form = document.querySelector('form');
+<form>
+  <label for="feet">Feet:</label>
+  <input type="number" id="feet" name="feet"><br>
+
+  <label for="inches">Inches:</label>
+  <input type="number" id="inches" name="inches"><br>
+
+  <input type="submit" value="Convert">
+</form>
+
+<div id="results"></div>
+
+<script>
+  const form = document.querySelector('form');
 
   form.addEventListener('submit', function(e){
       //grab content from feet input
@@ -25,3 +38,4 @@ const form = document.querySelector('form');
           document.querySelector('#inches').value = '';
       }
   });
+</script>
